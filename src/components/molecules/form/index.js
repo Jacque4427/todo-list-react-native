@@ -12,7 +12,7 @@ import { saveNewTask, updateTask } from '../../../hooks/useTasksList';
 
 
 export function Form({ navigation, route }) {
-  const { params: { task = {} } = {} } = route;
+  const { params: { task = undefined } = {} } = route;
 
   const [description, setDescription] = useState(task ? task.description : '')
   const [showInitDate, setShowInitDate] = useState(false)
